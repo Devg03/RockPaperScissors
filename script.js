@@ -18,6 +18,31 @@ function getPlayerChoice() {
     return response;
 }
 
+function playRound(playerSelection, computerSelection) {
+    switch (computerSelection) {
+        case "Rock":
+            if (playerSelection == "Rock")
+                return "Replay!!"
+            else if (playerSelection == "Paper")
+                return `You Win! ${playerSelection} beats ${computerSelection}`;
+            else if (playerSelection == "Scissors")
+                return `You Lose! ${playerSelection} beats ${computerSelection}`;
+        case "Paper":
+            if (playerSelection == "Paper")
+                return "Replay!!"
+            else if (playerSelection == "Scissors")
+                return `You Win! ${playerSelection} beats ${computerSelection}`;
+            else if (playerSelection == "Rock")
+                return `You Lose! ${playerSelection} beats ${computerSelection}`;
+        case "Scissors":
+            if (playerSelection == "Scissors")
+                return "Replay!!"
+            else if (playerSelection == "Rock")
+                return `You Win! ${playerSelection} beats ${computerSelection}`;
+            else if (playerSelection == "Paper")
+                return `You Lose! ${playerSelection} beats ${computerSelection}`;
+    }
+}
 
 const playerSelection = getPlayerChoice()
 const computerSelection = getComputerChoice();
