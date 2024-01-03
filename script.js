@@ -44,6 +44,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-let playerSelection = getPlayerChoice()
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection.toLowerCase(), computerSelection));
+function game() {
+
+    let playerSelection = getPlayerChoice()
+    let computerSelection = getComputerChoice();
+
+    console.log(playRound(playerSelection.toLowerCase(), computerSelection));
+}
+
+for (let i = 0; i < 5; i++) {
+    game();
+}
