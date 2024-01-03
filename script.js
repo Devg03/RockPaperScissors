@@ -21,29 +21,29 @@ function getPlayerChoice() {
 function playRound(playerSelection, computerSelection) {
     switch (computerSelection) {
         case "Rock":
-            if (playerSelection == "Rock")
+            if (playerSelection == "rock")
                 return "Replay!!"
-            else if (playerSelection == "Paper")
+            else if (playerSelection == "paper")
                 return `You Win! ${playerSelection} beats ${computerSelection}`;
-            else if (playerSelection == "Scissors")
+            else if (playerSelection == "scissors")
                 return `You Lose! ${playerSelection} beats ${computerSelection}`;
         case "Paper":
-            if (playerSelection == "Paper")
+            if (playerSelection == "paper")
                 return "Replay!!"
-            else if (playerSelection == "Scissors")
+            else if (playerSelection == "scissors")
                 return `You Win! ${playerSelection} beats ${computerSelection}`;
-            else if (playerSelection == "Rock")
+            else if (playerSelection == "rock")
                 return `You Lose! ${playerSelection} beats ${computerSelection}`;
         case "Scissors":
-            if (playerSelection == "Scissors")
+            if (playerSelection == "scissors")
                 return "Replay!!"
-            else if (playerSelection == "Rock")
+            else if (playerSelection == "rock")
                 return `You Win! ${playerSelection} beats ${computerSelection}`;
-            else if (playerSelection == "Paper")
+            else if (playerSelection == "paper")
                 return `You Lose! ${playerSelection} beats ${computerSelection}`;
     }
 }
 
-const playerSelection = getPlayerChoice()
+let playerSelection = getPlayerChoice()
 const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+console.log(playRound(playerSelection.toLowerCase(), computerSelection));
