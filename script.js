@@ -69,6 +69,7 @@ function playRound(playerSelection, computerSelection) {
                 return `You Lose! ${playerSelection} beats ${computerSelection}`;
             }
     }
+
 }
 
 const rockSign = document.createElement('div');
@@ -85,7 +86,13 @@ rockBtn.addEventListener('click', function () {
     rockSign.setAttribute('style', 'background-image: url("https://i.pinimg.com/736x/ee/99/6d/ee996d592980ec099f24c0836b2b7070.jpg"); visibility: visible;');
     sign.appendChild(rockSign);
 
-    result.textContent = playRound('rock', getComputerChoice());
+    if (pScore == 5) {
+        result.textContent = 'You have won! Computer lose!!'
+    } else if (cScore == 5) {
+        result.textContent = 'The computer has won! You lose!!'
+    } else {
+        result.textContent = playRound('rock', getComputerChoice());
+    }
 });
 
 paperBtn.addEventListener('click', function () {
@@ -98,7 +105,14 @@ paperBtn.addEventListener('click', function () {
     paperSign.setAttribute('style', 'background-image: url("https://i.pinimg.com/736x/03/e6/9c/03e69c77ade2b0cf740af358283addd0.jpg"); visibility: visible;');
     sign.appendChild(paperSign);
 
-    result.textContent = playRound('paper', getComputerChoice());
+
+    if (pScore == 5) {
+        result.textContent = 'You have won! Computer lose!!'
+    } else if (cScore == 5) {
+        result.textContent = 'The computer has won! You lose!!'
+    } else {
+        result.textContent = playRound('paper', getComputerChoice());
+    }
 });
 
 scissorBtn.addEventListener('click', function () {
@@ -111,7 +125,12 @@ scissorBtn.addEventListener('click', function () {
     scissorsSign.setAttribute('style', 'background-image: url("https://i.pinimg.com/236x/89/ef/5c/89ef5cd84c8a8882dfbafab475e40aac.jpg"); visibility: visible;');
     sign.appendChild(scissorsSign);
 
-    result.textContent = playRound('scissors', getComputerChoice());
+
+    if (pScore == 5) {
+        result.textContent = 'You have won! Computer lose!!'
+    } else if (cScore == 5) {
+        result.textContent = 'The computer has won! You lose!!'
+    } else {
+        result.textContent = playRound('scissors', getComputerChoice());
+    }
 });
-
-
