@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 body,
 html {
     height: 100%;
+    width: auto;
     margin: 0;
 }
 
@@ -8,8 +12,63 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 
     height: 100%;
+    width: 100%;
 
     background-image: url("https://images.pexels.com/photos/6985048/pexels-photo-6985048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+
+#bg button {
+    top: 60%;
+    left: 35%;
+    position: relative;
+    margin-left: 15px;
+
+    border: 2px solid aliceblue;
+    background-color: black;
+
+    font-size: 50px;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+#result {
+    top: 70%;
+    left: 40%;
+    font-size: 30px;
+    position: absolute;
+    font-family: 'Bungee Spice', sans-serif;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    left: 36%;
+    top: 5%;
+
+    color: #FFFFFF;
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#computer-score {
+    padding-left: 100px;
+}
+
+#sign>div {
+    width: 450px;
+    height: 450px;
+
+
+    top: 20%;
+    left: 45%;
+    position: absolute;
+
+    visibility: hidden;
+
+    background-position: center;
+    background-repeat: no-repeat;
 }
