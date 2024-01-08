@@ -1,4 +1,6 @@
-console.log("Hello!");
+const rockBtn = document.getElementById('btn1');
+const paperBtn = document.getElementById('btn2');
+const scissorBtn = document.getElementById('btn3');
 
 // Computer Choice
 function getComputerChoice() {
@@ -11,11 +13,6 @@ function getComputerChoice() {
     } else {
         return "Scissors";
     }
-}
-
-function getPlayerChoice() {
-    let response = prompt("Please enter your choice:\n1. Rock\n2. Paper\n3. Scissors");
-    return response;
 }
 
 function playRound(playerSelection, computerSelection) {
@@ -44,12 +41,14 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
+rockBtn.addEventListener('click', function () {
+    console.log(playRound('rock', getComputerChoice()));
+});
 
-    let playerSelection = getPlayerChoice()
-    let computerSelection = getComputerChoice();
+paperBtn.addEventListener('click', function () {
+    console.log(playRound('paper', getComputerChoice()));
+});
 
-    console.log(playRound(playerSelection.toLowerCase(), computerSelection));
-}
-
-game();  
+scissorBtn.addEventListener('click', function () {
+    console.log(playRound('scissors', getComputerChoice()));
+});
