@@ -1,3 +1,15 @@
-body {
-    background-color: floralwhite;
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+#bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    height: 100%;
+
+    background-image: url("https://images.pexels.com/photos/6985048/pexels-photo-6985048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
 }

@@ -1,6 +1,7 @@
 const rockBtn = document.getElementById('btn1');
 const paperBtn = document.getElementById('btn2');
 const scissorBtn = document.getElementById('btn3');
+const result = document.getElementById('result');
 
 // Computer Choice
 function getComputerChoice() {
@@ -42,13 +43,13 @@ function playRound(playerSelection, computerSelection) {
 }
 
 rockBtn.addEventListener('click', function () {
-    console.log(playRound('rock', getComputerChoice()));
+    result.textContent = playRound('rock', getComputerChoice());
 });
 
 paperBtn.addEventListener('click', function () {
-    console.log(playRound('paper', getComputerChoice()));
+    result.textContent = playRound('rock', getComputerChoice());
 });
 
 scissorBtn.addEventListener('click', function () {
-    console.log(playRound('scissors', getComputerChoice()));
+    result.textContent = playRound('rock', getComputerChoice());
 });
